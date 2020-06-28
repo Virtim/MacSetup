@@ -26,4 +26,4 @@ jobs:
 
     # Runs a set of commands using the runners shell
     - name: Runs a make file
-      run: make all
+      run: make brew
