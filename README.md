@@ -1,5 +1,6 @@
 # MacSetup
 
+![CI](https://github.com/Virtim/MacSetup/workflows/CI/badge.svg?branch=master)
 Repository to quickly install all required software on new mac
 
 ## Usage

@@ -14,16 +14,10 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
-    runs-on: macos-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
+  shellcheck:
+    name: Shellcheck
+    runs-on: ubuntu-latest
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
-
-    # Runs a set of commands using the runners shell
-    - name: Runs a make file
-      run: make brew
+    - uses: actions/checkout@master
+    - name: Run ShellCheck
+      uses: ludeeus/action-shellcheck@master
