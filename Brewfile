@@ -43,10 +43,8 @@ cask "punto-switcher"
 cask "tor-browser"
 cask "tunnelbear"
 cask "zoomus"
-mas "BarTunes", id: 444425546
 mas "iMovie", id: 408981434
 mas "Jira", id: 1475897096
-mas "Lightshot Screenshot", id: 526298438
 mas "Reeder", id: 880001334
 mas "Slack", id: 803453959
 mas "Spark", id: 1176895641
