@@ -31,7 +31,6 @@ brew "libksba"
 brew "mas"
 brew "minikube"
 brew "moreutils"
-brew "node@8"
 brew "openjdk@11"
 brew "rbenv"
 brew "rename"
@@ -43,15 +42,12 @@ brew "wtfutil"
 brew "yarn"
 brew "youtube-dl"
 brew "zlib"
-cask "1password"
 cask "adoptopenjdk"
 cask "android-sdk"
 cask "authy"
 cask "balenaetcher"
 cask "discord"
-cask "emacs"
-cask "fastlane"
-cask "firefox"
+cask "font-jetbrains-mono"
 cask "grammarly"
 cask "hey"
 cask "ilya-birman-typography-layout"
@@ -61,17 +57,21 @@ cask "monitorcontrol"
 cask "ngrok"
 cask "openvpn-connect"
 cask "proxyman"
-cask "punto-switcher"
 cask "signal"
 cask "skype"
+cask "spectacle"
 cask "spotify"
 cask "tor-browser"
 cask "tunnelbear"
+cask "visual-studio-code"
 cask "yandex-cloud-cli"
 cask "zoom"
-cask "zoomus"
+mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "Jira", id: 1475897096
+mas "Keynote", id: 409183694
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
 mas "Reeder", id: 1529448980
 mas "Slack", id: 803453959
 mas "Spark", id: 1176895641
