@@ -1,5 +1,5 @@
 # Creaate month and year variable
-MMYY=$(shell date +%m%Y)
+MMWWYY=$(shell date +%m%U%Y)
 
 all:
 	sh osx.sh
@@ -17,8 +17,8 @@ macos:
 	sh osx.sh
 monthlyupdate:
 	git checkout -B master origin/master
-	git checkout -b TM-update-$(MMYY)
+	git checkout -b TM-update-$(MMWWYY)
 	brew bundle dump -f
 	git add .
-	git commit -m "Monthly update $(MMYY)"
-	git push -u origin TM-update-$(MMYY)
+	git commit -m "Weekly update $(MMWWYY)"
+	git push -u origin TM-update-$(MMWWYY)
