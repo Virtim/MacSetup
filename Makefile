@@ -22,3 +22,5 @@ monthlyupdate:
 	git add .
 	git commit -m "Weekly update $(MMWWYY)"
 	git push -u origin TM-update-$(MMWWYY)
+	gh pr create --base master --title "TM-update-$(MMWWYY)" --fill
+	gh pr merge "TM-update-$(MMWWYY)" --admin
