@@ -5,10 +5,8 @@ tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "wtfutil/wtfutil"
 brew "allure"
-brew "python@3.9"
+brew "python@3.10"
 brew "ansible"
-brew "node"
-brew "appium"
 brew "aria2"
 brew "automake"
 brew "bash-completion"
@@ -31,18 +29,27 @@ brew "git"
 brew "glib"
 brew "gradle"
 brew "grep"
+brew "shared-mime-info"
+brew "libheif"
+brew "python@3.9"
 brew "imagemagick"
 brew "libimobiledevice"
 brew "ios-webkit-debug-proxy"
 brew "jq"
+brew "krb5"
 brew "kubernetes-cli"
 brew "libksba"
+brew "libmagic"
 brew "mas"
 brew "minikube"
 brew "moreutils"
+brew "mypy", link: false
 brew "nghttp2"
 brew "openjdk@11"
-brew "postgresql"
+brew "openssl@3"
+brew "postgresql@12"
+brew "postgresql@14"
+brew "python@3.8"
 brew "ruby-build"
 brew "rbenv"
 brew "rename"
@@ -55,13 +62,14 @@ brew "yarn"
 brew "youtube-dl"
 brew "zlib"
 cask "1password"
+cask "ace-link"
 cask "adoptopenjdk"
 cask "android-sdk"
 cask "backblaze"
 cask "balenaetcher"
 cask "coscreen"
 cask "discord"
-cask "fantastical"
+cask "docker"
 cask "figma"
 cask "firefox"
 cask "firefox-developer-edition"
@@ -96,3 +104,16 @@ cask "vlc"
 cask "webstorm"
 cask "yandex-cloud-cli"
 cask "zoom"
+mas "1Password for Safari", id: 1569813296
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
+mas "Jira", id: 1475897096
+mas "Keynote", id: 409183694
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Reeder", id: 1529448980
+mas "Slack", id: 803453959
+mas "Spark", id: 1176895641
+mas "Telegram Lite", id: 946399090
+mas "Todoist", id: 585829637
+mas "Xcode", id: 497799835
