@@ -60,6 +60,7 @@ brew "watchman"
 brew "wtfutil"
 brew "yarn"
 brew "youtube-dl"
+brew "yt-dlp"
 brew "zlib"
 cask "1password"
 cask "ace-link"
@@ -110,6 +111,7 @@ mas "iMovie", id: 408981434
 mas "Jira", id: 1475897096
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
+mas "Okta Verify", id: 490179405
 mas "Pages", id: 409201541
 mas "Reeder", id: 1529448980
 mas "Slack", id: 803453959
