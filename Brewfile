@@ -6,7 +6,7 @@ tap "homebrew/core"
 tap "wtfutil/wtfutil"
 brew "allure"
 brew "python@3.10"
-brew "ansible"
+brew "ansible", link: false
 brew "aria2"
 brew "automake"
 brew "bash-completion"
@@ -47,6 +47,7 @@ brew "mypy", link: false
 brew "nghttp2"
 brew "openjdk@11"
 brew "openssl@3"
+brew "poetry"
 brew "postgresql@12"
 brew "postgresql@14"
 brew "python@3.8"
@@ -107,9 +108,9 @@ cask "yandex-cloud-cli"
 cask "zoom"
 mas "1Password for Safari", id: 1569813296
 mas "GarageBand", id: 682658836
-mas "iMovie", id: 408981434
 mas "Jira", id: 1475897096
 mas "Keynote", id: 409183694
+mas "Mimir", id: 1508343025
 mas "Numbers", id: 409203825
 mas "Okta Verify", id: 490179405
 mas "Pages", id: 409201541
