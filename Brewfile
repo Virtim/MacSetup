@@ -129,4 +129,5 @@ mas "Slack", id: 803453959
 mas "Spark", id: 1176895641
 mas "Telegram Lite", id: 946399090
 mas "Todoist", id: 585829637
+mas "Transmit", id: 1436522307
 mas "Xcode", id: 497799835
