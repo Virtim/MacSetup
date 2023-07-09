@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.tim.syncshows</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/tim/Documents/MacSetup/scripts/syncshows/syncshows.sh</string> <!-- Replace with your actual script path -->
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+    <key>StandardOutPath</key>
+    <string>/Users/tim/dev/syncshows.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/tim/dev/syncshowserror.log</string>
+</dict>
+</plist>
