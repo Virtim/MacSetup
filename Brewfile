@@ -23,7 +23,7 @@ brew "circleci"
 brew "dos2unix"
 brew "dotnet"
 brew "folly"
-brew "openssl@3"
+brew "openssl@3", link: false
 brew "fastlane"
 brew "fizz"
 brew "wangle"
