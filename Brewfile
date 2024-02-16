@@ -58,7 +58,10 @@ cask "freecad"
 cask "obsidian"
 cask "raspberry-pi-imager"
 cask "rectangle"
+cask "telegram-desktop"
 cask "thunderbird"
+mas "CopyClip", id: 595191960
+mas "Ice Cubes", id: 6444915884
 mas "Jira", id: 1475897096
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
@@ -66,12 +69,13 @@ mas "Pages", id: 409201541
 mas "Reeder", id: 1529448980
 mas "Todoist", id: 585829637
 mas "Xcode", id: 497799835
-vscode "CircleCI.circleci"
+vscode "circleci.circleci"
 vscode "dbaeumer.vscode-eslint"
 vscode "eamodio.gitlens"
-vscode "GitHub.copilot"
-vscode "GitHub.copilot-chat"
+vscode "github.copilot"
+vscode "github.copilot-chat"
 vscode "hashicorp.terraform"
+vscode "ms-python.debugpy"
 vscode "ms-python.flake8"
 vscode "ms-python.isort"
 vscode "ms-python.python"
@@ -80,7 +84,8 @@ vscode "ms-toolsai.jupyter-keymap"
 vscode "ms-toolsai.jupyter-renderers"
 vscode "ms-toolsai.vscode-jupyter-cell-tags"
 vscode "ms-toolsai.vscode-jupyter-slideshow"
-vscode "PKief.material-icon-theme"
+vscode "pkief.material-icon-theme"
 vscode "redhat.ansible"
 vscode "redhat.vscode-yaml"
+vscode "rioj7.vscode-json-validate"
 vscode "timonwong.shellcheck"
