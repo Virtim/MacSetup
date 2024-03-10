@@ -10,6 +10,7 @@ tap "turbot/tap"
 brew "pycparser"
 brew "cffi"
 brew "openssl@3"
+brew "cryptography"
 brew "python-cryptography"
 brew "ansible"
 brew "black"
@@ -60,6 +61,7 @@ cask "raspberry-pi-imager"
 cask "rectangle"
 cask "telegram-desktop"
 cask "thunderbird"
+cask "warp"
 mas "CopyClip", id: 595191960
 mas "Ice Cubes", id: 6444915884
 mas "Jira", id: 1475897096
