@@ -79,7 +79,6 @@ mas "Ice Cubes", id: 6444915884
 mas "Jira", id: 1475897096
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
 mas "Reeder", id: 1529448980
 mas "Todoist", id: 585829637
 mas "Xcode", id: 497799835
