@@ -11,6 +11,7 @@ brew "pycparser"
 brew "cffi"
 brew "openssl@3"
 brew "cryptography"
+brew "ansible"
 brew "ansible-lint"
 brew "little-cms2"
 brew "jpeg-xl"
@@ -54,6 +55,7 @@ brew "youtube-dl"
 brew "yq"
 brew "yt-dlp"
 brew "zlib"
+brew "zsh-syntax-highlighting"
 brew "hashicorp/tap/terraform", link: false
 brew "hudochenkov/sshpass/sshpass"
 brew "kreuzwerker/taps/m1-terraform-provider-helper"
@@ -70,6 +72,7 @@ cask "raspberry-pi-imager"
 cask "rectangle"
 cask "telegram-desktop"
 cask "thunderbird"
+cask "vlc"
 cask "warp"
 cask "zed"
 mas "CopyClip", id: 595191960
@@ -77,7 +80,6 @@ mas "Ice Cubes", id: 6444915884
 mas "Jira", id: 1475897096
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
 mas "Reeder", id: 1529448980
 mas "Todoist", id: 585829637
 mas "Xcode", id: 497799835
