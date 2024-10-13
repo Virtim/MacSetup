@@ -72,6 +72,7 @@ cask "raspberry-pi-imager"
 cask "rectangle"
 cask "telegram-desktop"
 cask "thunderbird"
+cask "vlc"
 cask "warp"
 cask "zed"
 mas "CopyClip", id: 595191960
