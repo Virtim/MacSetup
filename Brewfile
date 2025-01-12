@@ -38,12 +38,13 @@ brew "jsonschema"
 brew "just"
 brew "libmagic"
 brew "midnight-commander"
+brew "nginx"
 brew "nuclei"
 brew "nvm"
-brew "postgresql@12", restart_service: true
+brew "postgresql@12", restart_service: :changed
 brew "pre-commit"
 brew "pyenv"
-brew "redis", restart_service: true
+brew "redis", restart_service: :changed
 brew "rsync"
 brew "steampipe"
 brew "tcl-tk"
