@@ -19,6 +19,8 @@ brew "aom"
 brew "black"
 brew "certbot"
 brew "coreutils"
+brew "cask"
+brew "certbot"
 brew "docker"
 brew "fish"
 brew "libavif"
@@ -59,6 +61,7 @@ brew "yq"
 brew "yt-dlp"
 brew "zlib"
 brew "zsh-syntax-highlighting"
+brew "hashicorp/tap/packer"
 brew "hashicorp/tap/terraform", link: false
 brew "hudochenkov/sshpass/sshpass"
 brew "kreuzwerker/taps/m1-terraform-provider-helper"
@@ -76,17 +79,10 @@ cask "raspberry-pi-imager"
 cask "rectangle"
 cask "telegram-desktop"
 cask "thunderbird"
+cask "vivaldi"
 cask "vlc"
 cask "warp"
 cask "zed"
-mas "CopyClip", id: 595191960
-mas "Ice Cubes", id: 6444915884
-mas "Jira", id: 1475897096
-mas "Keynote", id: 409183694
-mas "Numbers", id: 409203825
-mas "Reeder", id: 1529448980
-mas "Todoist", id: 585829637
-mas "Xcode", id: 497799835
 vscode "circleci.circleci"
 vscode "dbaeumer.vscode-eslint"
 vscode "eamodio.gitlens"
@@ -105,6 +101,8 @@ vscode "ms-toolsai.jupyter-keymap"
 vscode "ms-toolsai.jupyter-renderers"
 vscode "ms-toolsai.vscode-jupyter-cell-tags"
 vscode "ms-toolsai.vscode-jupyter-slideshow"
+vscode "ms-vscode-remote.remote-containers"
+vscode "ms-vscode.remote-explorer"
 vscode "pkief.material-icon-theme"
 vscode "redhat.ansible"
 vscode "redhat.vscode-yaml"
