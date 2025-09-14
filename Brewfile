@@ -50,6 +50,7 @@ brew "nvm"
 brew "pgcli"
 brew "poetry"
 brew "postgresql@12", restart_service: :changed
+brew "postgresql@14"
 brew "postgresql@16"
 brew "pre-commit"
 brew "pyenv"
