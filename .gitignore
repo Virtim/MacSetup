@@ -1,1 +1,8 @@
+# macOS system files
 .DS_store
+
+# Dotfiles - Secret/private configuration (NOT committed)
+# These files should contain API keys, passwords, tokens, etc.
+dotfiles/local.zsh
+dotfiles/local.sh
+dotfiles/.secrets

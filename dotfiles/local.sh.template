@@ -1,0 +1,14 @@
+# Local Configuration Template (Bash)
+# Copy this file to local.sh and add your private/sensitive configuration
+# local.sh is ignored by git and will not be committed
+
+# Example: Sensitive environment variables
+# export PULUMI_CONFIG_PASSPHRASE="your-passphrase-here"
+# export TAILSCALE_OAUTH_CLIENT_ID="your-client-id"
+# export TAILSCALE_OAUTH_CLIENT_SECRET="your-secret-here"
+
+# Example: Work-specific configurations
+# export WORK_API_KEY="your-api-key"
+
+# Example: Private aliases
+# alias ssh-work='ssh user@work-server.com'

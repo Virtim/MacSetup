@@ -1,0 +1,31 @@
+# MacSetup Bash Configuration
+# This file is managed in the MacSetup repository
+# System ~/.bashrc should source this file
+
+# Determine dotfiles directory
+DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# Load common configuration (cross-platform)
+[[ -f "$DOTFILES_DIR/common.sh" ]] && source "$DOTFILES_DIR/common.sh"
+
+# Load common aliases
+[[ -f "$DOTFILES_DIR/common-aliases.sh" ]] && source "$DOTFILES_DIR/common-aliases.sh"
+
+# Load common functions
+[[ -f "$DOTFILES_DIR/common-functions.sh" ]] && source "$DOTFILES_DIR/common-functions.sh"
+
+# Load macOS-specific configuration if on macOS
+[[ "$(uname)" == "Darwin" ]] && [[ -f "$DOTFILES_DIR/macos.sh" ]] && source "$DOTFILES_DIR/macos.sh"
+
+# Load company/job-specific configuration from ~/.company/
+# All .sh files in ~/.company/ are automatically sourced
+# This directory lives outside the repo to keep company configs separate
+if [[ -d "$HOME/.company" ]]; then
+  for company_config in "$HOME/.company"/*.sh; do
+    [[ -f "$company_config" ]] && source "$company_config"
+  done
+fi
+
+# Load local configuration (not tracked in git - for secrets/private config)
+# This loads last so it can override any previous settings
+[[ -f "$DOTFILES_DIR/local.sh" ]] && source "$DOTFILES_DIR/local.sh"
