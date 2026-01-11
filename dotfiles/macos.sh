@@ -1,3 +1,4 @@
+#!/bin/sh
 # macOS-Specific Configuration
 # This file is managed in the MacSetup repository
 # Only sourced on macOS systems

@@ -1,3 +1,4 @@
+# shellcheck shell=bash
 # MacSetup ZSH Configuration
 # This file is managed in the MacSetup repository
 # System ~/.zshrc should source this file
@@ -9,16 +10,19 @@ DOTFILES_DIR="${0:A:h}"  # Directory containing this file
 export ZSH="$HOME/.oh-my-zsh"
 
 # Oh My Zsh theme
+# shellcheck disable=SC2034
 ZSH_THEME="robbyrussell"
 
 # History settings
+# shellcheck disable=SC2034
 HIST_STAMPS='mm/dd/yyyy'
 
 # Oh My Zsh plugins
+# shellcheck disable=SC2034
 plugins=(git)
 
 # Load Oh My Zsh if installed
-[[ -d "$ZSH" ]] && source $ZSH/oh-my-zsh.sh
+[[ -d "$ZSH" ]] && source "$ZSH/oh-my-zsh.sh"
 
 # Load common configuration (cross-platform)
 [[ -f "$DOTFILES_DIR/common.sh" ]] && source "$DOTFILES_DIR/common.sh"
@@ -36,7 +40,7 @@ plugins=(git)
 # All .sh files in ~/.company/ are automatically sourced
 # This directory lives outside the repo to keep company configs separate
 if [[ -d "$HOME/.company" ]]; then
-  for company_config in "$HOME/.company"/*.sh(N); do
+  for company_config in "$HOME/.company"/*.sh; do
     [[ -f "$company_config" ]] && source "$company_config"
   done
 fi

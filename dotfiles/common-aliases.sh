@@ -1,3 +1,4 @@
+#!/bin/sh
 # Common Shell Aliases
 # This file is managed in the MacSetup repository
 # Compatible with both Bash and ZSH on all platforms
