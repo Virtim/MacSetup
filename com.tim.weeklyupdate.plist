@@ -7,22 +7,29 @@
 
   <key>ProgramArguments</key>
   <array>
-    <string>cd ~/Documents/MacSetup && make monthlyupdate</string>
+    <string>/usr/bin/make</string>
+    <string>weeklyupdate</string>
   </array>
+
+  <key>WorkingDirectory</key>
+  <string>/Users/tim/dev/MacSetup</string>
 
   <key>Nice</key>
   <integer>1</integer>
+
   <key>StartCalendarInterval</key>
-    <dict>
-        <key>Day</key>
-        <integer>1</integer>
-    </dict>
+  <dict>
+    <key>Weekday</key>
+    <integer>1</integer>
+  </dict>
+
   <key>RunAtLoad</key>
-  <true/>
+  <false/>
+
   <key>StandardErrorPath</key>
-  <string>~/Desktop/tmp/AlTest1.err</string>
+  <string>/Users/tim/Library/Logs/weeklyupdate.err</string>
 
   <key>StandardOutPath</key>
-  <string>~/Desktop/tmp/AlTest1.out</string>
+  <string>/Users/tim/Library/Logs/weeklyupdate.log</string>
 </dict>
 </plist>

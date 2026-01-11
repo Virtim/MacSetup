@@ -47,13 +47,13 @@ The dotfiles system provides centralized shell configuration:
 - `local.zsh`/`local.sh` files (git-ignored) for sensitive/private configuration
 - See `dotfiles/README.md` for detailed documentation
 
-### Monthly Update Workflow
+### Weekly Update Workflow
 ```bash
 # Create branch, update Brewfile, commit, push, create and merge PR
-make monthlyupdate
+make weeklyupdate
 ```
 
-This target automates the monthly dependency update process:
+This target automates the weekly dependency update process:
 1. Checks out fresh `master` branch
 2. Creates dated branch using format `TM-update-MMWWYY` (month, week, year)
 3. Runs `brew bundle dump -f` to regenerate Brewfile with current packages
@@ -64,13 +64,24 @@ This target automates the monthly dependency update process:
 **Note:** The Makefile variable `MMWWYY=$(shell date +%m%U%Y)` generates the date format.
 
 ### Launchd Automation
-The repository includes a launchd configuration (`com.tim.weeklyupdate.plist`) that automatically runs `make monthlyupdate` on the 1st of each month.
+The repository includes a launchd configuration (`com.tim.weeklyupdate.plist`) that automatically runs `make weeklyupdate` every Monday.
 
 To install:
 ```bash
-cp com.tim.weeklyupdate.plist $HOME/Library/LaunchAgents
-launchctl load com.tim.weeklyupdate.plist
+cp com.tim.weeklyupdate.plist $HOME/Library/LaunchAgents/
+launchctl load $HOME/Library/LaunchAgents/com.tim.weeklyupdate.plist
 ```
+
+To uninstall/update:
+```bash
+launchctl unload $HOME/Library/LaunchAgents/com.tim.weeklyupdate.plist
+# Make changes, then reload:
+launchctl load $HOME/Library/LaunchAgents/com.tim.weeklyupdate.plist
+```
+
+Logs are written to:
+- Standard output: `~/Library/Logs/weeklyupdate.log`
+- Standard error: `~/Library/Logs/weeklyupdate.err`
 
 ## Architecture
 

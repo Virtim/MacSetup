@@ -18,7 +18,7 @@ dotfiles:
 	sh dotfiles.sh
 macos:
 	sh osx.sh
-monthlyupdate:
+weeklyupdate:
 	git checkout -B master origin/master
 	git checkout -b TM-update-$(MMWWYY)
 	brew bundle dump -f
