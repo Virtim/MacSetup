@@ -6,6 +6,7 @@ all:
 	sh brew.sh
 	sh android.sh
 	./.macos
+	sh dotfiles.sh
 android:
 	# will only work with brew installed
 	sh android.sh
@@ -13,6 +14,8 @@ brew:
 	sh brew.sh
 git:
 	sh git.sh
+dotfiles:
+	sh dotfiles.sh
 macos:
 	sh osx.sh
 monthlyupdate:
