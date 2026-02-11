@@ -11,6 +11,7 @@ alias python='python3'
 
 # Ansible configuration
 export ANSIBLE_STDOUT_CALLBACK=yaml
+export no_proxy=*
 
 # AWS Configuration (general)
 # Job-specific AWS profiles should be set in job-specific files (e.g., ~/.company/company.sh)
