@@ -6,6 +6,14 @@
 # Determine dotfiles directory
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+# History settings
+HISTFILE="$HOME/.bash_history"
+HISTSIZE=1000000                        # commands kept in memory
+HISTFILESIZE=1000000                    # commands saved to disk (~2 years at high usage)
+HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S  "   # timestamp shown with each entry: 2026-03-12 15:42:00
+HISTCONTROL=ignoredups                  # don't save consecutive duplicate commands
+shopt -s histappend                     # append to history file instead of overwriting it
+
 # Load common configuration (cross-platform)
 # shellcheck disable=SC1091
 [[ -f "$DOTFILES_DIR/common.sh" ]] && source "$DOTFILES_DIR/common.sh"

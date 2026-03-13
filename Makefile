@@ -5,7 +5,7 @@ all:
 	sh osx.sh
 	sh brew.sh
 	sh android.sh
-	./.macos
+	bash .macos
 	sh dotfiles.sh
 android:
 	# will only work with brew installed
