@@ -3,6 +3,9 @@
 # This file is managed in the MacSetup repository
 # Compatible with both Bash and ZSH on all platforms
 
+# History — show full date+time with every entry (overrides Oh My Zsh's date-only alias)
+alias history='fc -l -t "%Y-%m-%d %H:%M:%S" 1'
+
 # Git aliases
 alias gr='cd $(git rev-parse --show-toplevel)'  # Go to git root
 

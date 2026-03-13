@@ -6,24 +6,15 @@
 # Determine dotfiles directory
 DOTFILES_DIR="${0:A:h}"  # Directory containing this file
 
-# Path to your oh-my-zsh installation
-export ZSH="$HOME/.oh-my-zsh"
-
-# Oh My Zsh theme
-# shellcheck disable=SC2034
-ZSH_THEME="robbyrussell"
-
 # History settings
-# shellcheck disable=SC2034
-HIST_STAMPS='mm/dd/yyyy'
-
-# Oh My Zsh plugins
-# shellcheck disable=SC2034
-plugins=(git)
-
-# Load Oh My Zsh if installed
-# shellcheck disable=SC1091
-[[ -d "$ZSH" ]] && source "$ZSH/oh-my-zsh.sh"
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=1000000          # commands kept in memory
+SAVEHIST=1000000          # commands saved to disk (~2 years at high usage)
+setopt EXTENDED_HISTORY   # save timestamp and duration with each entry
+setopt HIST_IGNORE_DUPS   # don't save consecutive duplicate commands
+setopt HIST_IGNORE_SPACE  # don't save commands that start with a space
+setopt HIST_VERIFY        # show expanded history before executing (with !!)
+setopt SHARE_HISTORY      # share history across all open terminal sessions
 
 # Load common configuration (cross-platform)
 # shellcheck disable=SC1091
@@ -64,4 +55,9 @@ if [[ "$(uname)" == "Darwin" ]]; then
   # shellcheck disable=SC1091
   [[ -f "/opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]] && \
     source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
+
+# Oh My Posh prompt (Catppuccin theme)
+if command -v oh-my-posh &>/dev/null; then
+  eval "$(oh-my-posh init zsh --config "$(brew --prefix oh-my-posh)/themes/catppuccin.omp.json")"
 fi
