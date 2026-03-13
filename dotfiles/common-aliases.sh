@@ -22,3 +22,10 @@ alias opsignin='eval $(op signin)'
 
 # Docker aliases
 alias dps='docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Status}}\t{{.Ports}}"'
+
+# ls — use eza if available (colors, icons, folders on top), fall back to plain ls
+if command -v eza &>/dev/null; then
+  alias ls='eza -lah --group-directories-first --icons --octal-permissions --no-permissions --total-size'
+else
+  alias ls='ls -lah'
+fi

@@ -63,21 +63,20 @@ brew "tflint"
 brew "virtualenv", link: false
 brew "yamllint"
 brew "yq"
-brew "yt-dlp"
 brew "zlib"
 brew "zsh-syntax-highlighting"
 brew "jandedobbeleer/oh-my-posh/oh-my-posh"
 brew "hashicorp/tap/packer"
 brew "hashicorp/tap/terraform", link: false
 brew "hudochenkov/sshpass/sshpass"
-brew "kreuzwerker/taps/m1-terraform-provider-helper"
-brew "mutagen-io/mutagen/mutagen"
+
+
 cask "1password-cli"
 cask "bambu-studio"
-cask "blender"
-cask "cursor"
+
+
 cask "deltachat"
-cask "far2l"
+
 cask "font-hack-nerd-font"
 cask "freecad"
 cask "ghostty"
@@ -85,9 +84,6 @@ cask "obsidian"
 cask "oktadeveloper/tap/okta"
 cask "raspberry-pi-imager"
 cask "rectangle"
-cask "telegram-desktop"
-cask "thunderbird"
-cask "ticktick"
 cask "ungoogled-chromium"
 cask "vlc"
 cask "zed"

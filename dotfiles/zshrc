@@ -47,7 +47,14 @@ fi
 # shellcheck disable=SC1091
 [[ -f "$DOTFILES_DIR/local.zsh" ]] && source "$DOTFILES_DIR/local.zsh"
 
-# Bash completion support
+# ZSH completion system (enables tab completion for git, brew, terraform, etc.)
+# Add Homebrew's zsh-completions to fpath before initialising compinit
+if type brew &>/dev/null; then
+  FPATH="$(brew --prefix)/share/zsh-completions:$(brew --prefix)/share/zsh/site-functions:$FPATH"
+fi
+# -u skips the insecure-directory check (Homebrew dirs are group-writable by design)
+autoload -Uz compinit && compinit -u
+# Bash completion support (for tools that only ship bash completions)
 autoload -U +X bashcompinit && bashcompinit
 
 # ZSH syntax highlighting (if installed via Homebrew on macOS)
