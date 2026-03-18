@@ -57,12 +57,23 @@ autoload -Uz compinit && compinit -u
 # Bash completion support (for tools that only ship bash completions)
 autoload -U +X bashcompinit && bashcompinit
 
-# ZSH syntax highlighting (if installed via Homebrew on macOS)
-if [[ "$(uname)" == "Darwin" ]]; then
-  # shellcheck disable=SC1091
-  [[ -f "/opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]] && \
-    source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-fi
+# ZSH syntax highlighting — colours commands as you type (valid=green, invalid=red)
+# shellcheck disable=SC1091
+[[ -f "$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]] && \
+  source "$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+
+# ZSH autosuggestions — suggests commands from history as you type (accept with →)
+# shellcheck disable=SC1091
+[[ -f "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]] && \
+  source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+
+# fzf — fuzzy finder: Ctrl+R searches history, Ctrl+T finds files, Alt+C jumps dirs
+# shellcheck disable=SC1091
+[[ -f "$(brew --prefix)/opt/fzf/shell/key-bindings.zsh" ]] && \
+  source "$(brew --prefix)/opt/fzf/shell/key-bindings.zsh"
+# shellcheck disable=SC1091
+[[ -f "$(brew --prefix)/opt/fzf/shell/completion.zsh" ]] && \
+  source "$(brew --prefix)/opt/fzf/shell/completion.zsh"
 
 # Oh My Posh prompt (Catppuccin theme)
 if command -v oh-my-posh &>/dev/null; then

@@ -64,6 +64,8 @@ brew "virtualenv", link: false
 brew "yamllint"
 brew "yq"
 brew "zlib"
+brew "fzf"
+brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 brew "jandedobbeleer/oh-my-posh/oh-my-posh"
 brew "hashicorp/tap/packer"

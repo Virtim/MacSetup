@@ -10,7 +10,10 @@ export EDITOR='vim'
 alias python='python3'
 
 # Ansible configuration
-export ANSIBLE_STDOUT_CALLBACK=yaml
+# community.general.yaml callback was removed in collection v12.0.0;
+# use the built-in default callback with result_format=yaml instead (ansible-core 2.13+)
+export ANSIBLE_STDOUT_CALLBACK=default
+export ANSIBLE_CALLBACK_RESULT_FORMAT=yaml
 export no_proxy=*
 
 # AWS Configuration (general)
