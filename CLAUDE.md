@@ -54,7 +54,7 @@ make weeklyupdate
 ```
 
 This target automates the weekly dependency update process:
-1. Checks out fresh `master` branch
+1. Checks out fresh `main` branch
 2. Creates dated branch using format `TM-update-MMWWYY` (month, week, year)
 3. Runs `brew bundle dump -f` to regenerate Brewfile with current packages
 4. Commits changes with message "Weekly update MMWWYY"
