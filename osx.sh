@@ -18,5 +18,14 @@ sudo softwareupdate -ia --verbose
 echo "------------------------------------"
 echo "Installing Xcode Command Line Tools."
 echo "------------------------------------"
-# Install Xcode command line tools
-xcode-select --install
+# Install Xcode command line tools (skip if already installed)
+if xcode-select -p &>/dev/null; then
+  echo "Xcode Command Line Tools already installed. Skipping."
+else
+  xcode-select --install
+  echo "Waiting for Xcode Command Line Tools installation..."
+  until xcode-select -p &>/dev/null; do
+    sleep 5
+  done
+  echo "Xcode Command Line Tools installed."
+fi

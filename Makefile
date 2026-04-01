@@ -19,11 +19,11 @@ dotfiles:
 macos:
 	sh osx.sh
 weeklyupdate:
-	git checkout -B master origin/master
+	git checkout -B main origin/main
 	git checkout -b TM-update-$(MMWWYY)
 	brew bundle dump -f
 	git add .
 	git commit -m "Weekly update $(MMWWYY)"
 	git push -u origin TM-update-$(MMWWYY)
-	gh pr create --base master --title "TM-update-$(MMWWYY)" --fill
+	gh pr create --base main --title "TM-update-$(MMWWYY)" --fill
 	gh pr merge "TM-update-$(MMWWYY)" --admin --merge
