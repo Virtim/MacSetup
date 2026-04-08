@@ -12,6 +12,8 @@ fi
 # macOS-specific Ansible configuration
 # Fixes playbook crashes: https://github.com/ansible/ansible/issues/32499
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+# Fixes crash on MacOS 26
+export OS_ACTIVITY_MODE=disable
 
 # macOS-specific aliases
 alias tfs='terraform show tf.plan -no-color | pbcopy'  # Uses pbcopy (macOS clipboard)
