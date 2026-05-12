@@ -95,6 +95,22 @@ if [ ! -f "$DOTFILES_DIR/local.sh" ]; then
     echo "  → Edit $DOTFILES_DIR/local.sh to add your sensitive configuration"
 fi
 
+# Setup Zed config symlinks
+echo "Setting up Zed config symlinks"
+mkdir -p "$HOME/.config/zed"
+for zed_file in "$DOTFILES_DIR/zed/"*; do
+    target="$HOME/.config/zed/$(basename "$zed_file")"
+    if [ -f "$target" ] && [ ! -L "$target" ]; then
+        echo "Backing up existing $target"
+        cp "$target" "$BACKUP_DIR/$(basename "$zed_file")"
+        rm "$target"
+    fi
+    if [ ! -L "$target" ]; then
+        ln -s "$zed_file" "$target"
+        echo "  → Linked $target"
+    fi
+done
+
 echo ""
 echo "=========================================="
 echo "Installation Complete!"
